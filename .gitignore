@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+.env
+resources/output.csv
+*.pyc
+.DS_Store
+.idea/
+.vscode/
