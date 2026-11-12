@@ -53,14 +53,19 @@ def classify(logs):
         label = classify_log(source, log_msg)
         labels.append((source, label, log_msg))
     return labels
-def classify_csv(input_file):
-    df=pd.read_csv(input_file)
+def classify_csv(input_file, output_file="resources/output.csv"):
+    from pathlib import Path
 
-#perfrom classification
-    df["target_label"]=classify(list(zip(df["source"], df["log_message"])))
-    output_file="resources/output.csv"
-    df.to_csv(output_file, index=False)
+    df = pd.read_csv(input_file)
+    df["target_label"] = [
+        classify_log(source, message)
+        for source, message in zip(df["source"], df["log_message"])
+    ]
 
+    output_path = Path(output_file)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(output_path, index=False)
+    return str(output_path)
 
 
 if __name__ == "__main__":
