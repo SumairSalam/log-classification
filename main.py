@@ -1,3 +1,8 @@
+"""
+Provide the original starter-script entry point.
+This script prints a greeting and does not run the classification pipeline.
+"""
+
 # This is a sample Python script.
 
 # Press Shift+F10 to execute it or replace it with your code.
