@@ -1,3 +1,9 @@
+"""
+Route log messages through the local prototype classification functions.
+Use keyword rules for LegacyCRM and regex rules with a placeholder fallback
+for other sources. Export CSV labels and return the saved output path.
+"""
+
 # classify.py
 import pandas as pd
 
