@@ -1,3 +1,9 @@
+"""
+Classify log messages using predefined regular-expression patterns.
+Recognized events include user actions, backups, API requests, and system errors.
+Messages without a matching pattern return Other.
+"""
+
 import re
 
 
