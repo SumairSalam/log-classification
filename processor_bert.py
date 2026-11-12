@@ -1,6 +1,7 @@
 import os
-from sentence_transformers import SentenceTransformer
+
 import joblib
+from sentence_transformers import SentenceTransformer
 
 # Correct absolute path to the model file
 model_path = r'D:\projects\Log-Classification\models\log_classifier.joblib'

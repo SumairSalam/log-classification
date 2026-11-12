@@ -1,5 +1,6 @@
 import re
 
+
 def classify_with_regex(log_message):
         log_message = ' '.join(log_message.split())  # normalize whitespace
 
