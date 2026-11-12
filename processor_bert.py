@@ -1,3 +1,9 @@
+"""
+Classify logs using MiniLM sentence embeddings and a saved classifier.
+Load the classifier from the configured Joblib path and return unclassified
+when the highest predicted probability is below 0.5.
+"""
+
 import os
 
 import joblib
