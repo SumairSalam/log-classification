@@ -1,3 +1,9 @@
+"""
+Classify log messages through the Groq chat-completion API.
+Load GROQ_API_KEY from the environment and request Workflow Error,
+Deprecation Warning, or Unclassified labels.
+"""
+
 import os
 
 from dotenv import load_dotenv
